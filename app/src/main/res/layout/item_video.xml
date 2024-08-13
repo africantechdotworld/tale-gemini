@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/linear12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/play_pause"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:focusable="false"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/play" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:id="@+id/linear5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/linear9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:fontFamily="@font/sfprodisplaybold"
+                                android:padding="3dp"
+                                android:text="tale@gemini"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/verified_badge"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:focusable="false"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/lek" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/caption"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:fontFamily="@font/sfprodisplayregular"
+                            android:padding="3dp"
+                            android:text="I CAN'T STOP SMILING HAHA"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear6"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <ImageView
+                            android:id="@+id/music_note_icon"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:focusable="false"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/a3h"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/sound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:fontFamily="@font/sfprodisplaymedium"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:text="SONG BY WIZKID"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear4"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:translationX="-58.0dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/a4j"
+                        android:padding="5dp"
+                        android:src="@drawable/a7_"
+                        app:civ_border_color="#FFFFFF"
+                        app:civ_border_overlay="true"
+                        app:civ_border_width="0dp"
+                        app:civ_circle_background_color="#FFFFFF" />
+
+                    <ImageView
+                        android:id="@+id/like_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="20dp"
+                        android:focusable="false"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_home_like_before" />
+
+                    <ImageView
+                        android:id="@+id/gemini_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="20dp"
+                        android:focusable="false"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/magic_wand" />
+
+                    <ImageView
+                        android:id="@+id/save_icon"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="20dp"
+                        android:alpha="0.9"
+                        android:focusable="false"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_bookmark_white" />
+
+                    <ImageView
+                        android:id="@+id/share_icon"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="20dp"
+                        android:focusable="false"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/uulk" />
+
+                    <RelativeLayout
+                        android:id="@+id/music_note_linear"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

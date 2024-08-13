@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "985446371063",
+    "project_id": "aqueous-entry-430618-v5",
+    "storage_bucket": "aqueous-entry-430618-v5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985446371063:android:158718358c2ab699cccdf2",
+        "android_client_info": {
+          "package_name": "com.app.tale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985446371063-3f0u5oostb4eeoggckk98ts2ip3fub5v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.tale",
+            "certificate_hash": "06022094fb55f9f315b3f400060c2b148f899f00"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe5XpgDhGjl8UabAFso72DxRrk9DcgtXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
