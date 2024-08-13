@@ -15,6 +15,10 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaCodec;
+import android.media.MediaCodecInfo;
+import android.media.MediaExtractor;
+import android.media.MediaFormat;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -267,7 +271,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                             });
                 } else {
                     // User is already signed in, proceed with uploading video
-                    Toast.makeText(context, "Uploading Video...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Processing video... pls wait", Toast.LENGTH_SHORT).show();
                     handleGeminiMagicButtonClick(view.getContext(), videoPath, pos);
                 }
             });
@@ -331,6 +335,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                 showDescription(description, pos);
             } else {
                 // Extract audio and upload in the background
+
                 analyzeVideo(context, videoPath, pos);
             }
         }
