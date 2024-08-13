@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.app.tale"
-        minSdk = 21
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -76,7 +76,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.arthenica:mobile-ffmpeg-full:4.4.LTS")
+    //implementation("com.arthenica:mobile-ffmpeg-full:4.4.LTS")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation("org.json:json:20210307")
     implementation("de.hdodenhof:circleimageview:3.1.0")
@@ -94,30 +94,5 @@ dependencies {
 
     // Required for streaming operations (to use `Publisher` from Reactive Streams)
     implementation("org.reactivestreams:reactive-streams:1.0.4")
+    implementation("com.arthenica:mobile-ffmpeg-min-gpl:4.4")
 }
-
-/*
-configurations.all {
-    resolutionStrategy {
-        force(
-            "io.grpc:grpc-core:1.53.0",
-            "io.grpc:grpc-okhttp:1.53.0",
-            "io.grpc:grpc-protobuf:1.53.0",
-            "io.grpc:grpc-stub:1.53.0",
-            "io.grpc:grpc-alts:1.53.0"
-        )
-    }
-}
-
-implementation("com.google.cloud:google-cloud-vertexai:0.4.0")
-    implementation("io.grpc:grpc-okhttp:1.61.1")
-    implementation("io.grpc:grpc-netty:1.61.1")
-
-    implementation("io.grpc:grpc-protobuf:1.61.1")
-    implementation("io.grpc:grpc-stub:1.61.1")
-    implementation("io.grpc:grpc-alts:1.61.1")
-    implementation("io.grpc:grpc-core:1.61.1")
-
-    // Ensure to use compatible versions with gax and other libraries
-    implementation("com.google.api:gax-grpc:2.19.0")
- */

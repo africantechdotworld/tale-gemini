@@ -50,9 +50,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.app.tale.utils.FileUtils;
 import com.app.tale.utils.FirebaseUtil;
 import com.app.tale.utils.GeminiUtil;
 import com.app.tale.utils.PlaylistUtil;
+import com.app.tale.utils.VideoCompressor;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -70,6 +72,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     private Map<String, String> videoDescriptions = new HashMap<>();
     private int clickedPos;
     private Gson gson = new Gson();
+    String tempOutputPath = null;
 
     public VideoAdapter(List<Map<String, Object>> videoDataList, boolean showThumbnails) {
         this.videoDataList = videoDataList;
@@ -217,10 +220,11 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                 return true;
             });
 
+            /*
             binding.avatar.setOnClickListener(view -> {
                 Toast.makeText(context, "Tale - Ai Video Player", Toast.LENGTH_SHORT).show();
             });
-
+            */
 
             // pause or play video when clicked
             binding.container.setOnClickListener(view -> {
@@ -335,8 +339,22 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                 showDescription(description, pos);
             } else {
                 // Extract audio and upload in the background
+                tempOutputPath = FileUtils.createTempVideoFilePath(context);
 
-                analyzeVideo(context, videoPath, pos);
+                VideoCompressor.compressVideo(videoPath, tempOutputPath, new VideoCompressor.VideoCompressionListener() {
+                    @Override
+                    public void onSuccess(String outputPath) {
+                        Log.d("Video Compressor", "Video Compressed Successfully at" + outputPath);
+                        // Handle success, e.g., play the compressed video or upload it
+                        analyzeVideo(context, outputPath, pos);
+                    }
+
+                    @Override
+                    public void onFailure(String errorMessage) {
+                        // Handle failure
+                        Log.d("Video Compressor", "Failed to compress video");
+                    }
+                });
             }
         }
 
@@ -361,6 +379,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                         saveDescriptionsToPreferences(context, videoDescriptions);
                         showDescription(response, pos);
                     });
+                    // Delete the temporary file after use
+                    new File(tempOutputPath).delete();
                 }
 
                 @Override
@@ -370,6 +390,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                         Toast.makeText(context, "Failed to analyze video.", Toast.LENGTH_LONG).show();
                         Log.d(TAG, "Failed to analyze video.");
                     });
+                    // Delete the temporary file after use
+                    new File(tempOutputPath).delete();
                 }
             });
         }

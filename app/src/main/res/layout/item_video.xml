@@ -156,28 +156,16 @@
                     android:id="@+id/linear4"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal|bottom"
+                    android:gravity="center|center_horizontal"
                     android:orientation="vertical"
                     android:padding="8dp"
                     android:translationX="-58.0dp">
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/avatar"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/a4j"
-                        android:padding="5dp"
-                        android:src="@drawable/a7_"
-                        app:civ_border_color="#FFFFFF"
-                        app:civ_border_overlay="true"
-                        app:civ_border_width="0dp"
-                        app:civ_circle_background_color="#FFFFFF" />
 
                     <ImageView
                         android:id="@+id/like_icon"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="300dp"
                         android:focusable="false"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_home_like_before" />
@@ -209,15 +197,6 @@
                         android:focusable="false"
                         android:scaleType="fitCenter"
                         android:src="@drawable/uulk" />
-
-                    <RelativeLayout
-                        android:id="@+id/music_note_linear"
-                        android:layout_width="45dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="5dp"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical"/>
 
                 </LinearLayout>
 
