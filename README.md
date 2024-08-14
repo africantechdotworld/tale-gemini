@@ -1,7 +1,7 @@
 
 Download the demo app from the below drive link
 
-https://drive.google.com/file/d/1JbJCWWy28FUm80cjBbqjUy5HfnvpzK2o/view?usp=drivesdk
+https://drive.google.com/file/d/1Jdnyn3OhaV-9uFmBvfY4B5wjrRxgZkvt/view?usp=drivesdk
 
 # Tale App with Vertex AI for Firebase Integration
 
