@@ -28,7 +28,7 @@ To work on this codebase, you need to have the following:
 1. Clone this repository:
    ```bash
    git clone https://github.com/africantechdotworld/tale-gemini.git
-   cd your-repo
+   cd tale-gemini
    ```
 
 2. Place the `google-services.json` file under the `app/` directory.
